@@ -3,51 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Palindrome Checker</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background: #f5f5f5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    #app {
-      background: white;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      text-align: center;
-      width: 300px;
-    }
-
-    input {
-      width: 100%;
-      padding: 0.6rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 0.5rem;
-    }
-
-    button {
-      background: #007BFF;
-      color: white;
-      border: none;
-      padding: 0.6rem 1rem;
-      border-radius: 0.5rem;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #0056b3;
-    }
-
-    #result {
-      margin-top: 1rem;
-      font-weight: bold;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css"> <!-- Arquivo CSS externo -->
 </head>
 <body>
 
@@ -58,51 +14,6 @@
   <p id="result"></p>
 </div>
 
-<script>
-  const input = document.getElementById('text-input');
-  const btn = document.getElementById('check-btn');
-  const result = document.getElementById('result');
-
-  function isPalindrome(str) {
-    const cleaned = str.replace(/[^a-z0-9]/gi, '').toLowerCase();
-    const reversed = cleaned.split('').reverse().join('');
-    return cleaned === reversed;
-  }
-
-  btn.addEventListener('click', () => {
-    const value = input.value;
-    if (!value) {
-      alert("Please input a value");
-      return;
-    }
-
-    const palindrome = isPalindrome(value);
-    if (palindrome) {
-      result.textContent = `${value} is a palindrome.`;
-    } else {
-      result.textContent = `${value} is not a palindrome.`;
-    }
-  });
-</script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Palindrome Checker</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<div id="app">
-  <h2>Palindrome Checker</h2>
-  <input id="text-input" type="text" placeholder="Enter a phrase" />
-  <button id="check-btn">Check</button>
-  <p id="result"></p>
-</div>
-
-<script src="script.js"></script>
+<script src="script.js"></script> <!-- Arquivo JS externo -->
 </body>
 </html>
